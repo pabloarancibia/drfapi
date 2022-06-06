@@ -1,0 +1,43 @@
+modelo para usaurios custom
+modelo de usuarios admin, donde creamos las propias funciones para crear usuarios 
+y tambien superusuario
+
+superusuario admin@admin.com pass admin
+
+Habilitar modelo usuarios en la pagina de administracion de django
+
+API VIEW: mayor control de la logica, utiliza los metodos HTTP
+metodo get
+URLs archivos
+
+Serializers, creamos primer serializador, 
+metodo post
+metodo put
+metodo patch
+metodo delete
+
+VIEWSETS
+funciones de los operadores de los modelos, list, create, update, partial_update, retrieve, destroy
+Se encarga de la logica comun CRUD
+forma mas rapida de hacer una interfaz con un a bd
+Para operaciones simples de CRUD
+Poca personalizacion de logica
+Trabaja con estructuras de datos normales...
+
+ListViewSet
+Routers para URLs en ViewSets
+create, update, partial_update, destroy... y retrieve.
+
+MODELS Serializer
+Crea usuario en el serializador llamando a funcion en model
+create y update en Serializer
+Viewset para acceder a estos metodos a travez de un endpoint
+
+MODEL VIEWSET
+acceder a los metodos de model serializer desde model viewset para crear y actualizar usuarios.
+
+Permiso de acceso personalisado (permissions,py)
+agrego los permisos a mi model viewset
+
+quedo en min 1.24
+
