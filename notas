@@ -43,12 +43,14 @@ Viewset para acceder a estos metodos a travez de un endpoint
 MODEL VIEWSET
 acceder a los metodos de model serializer desde model viewset para crear y actualizar usuarios.
 
-Permiso de acceso personalisado (permissions,py)
+PERMISSIONS
+Permiso de acceso personalisado (permissions classes)
 agrego los permisos a mi model viewset
 
 Filtros
 
 Login, dar token con ObtainAuthToken y api_settings
 
-
+Feed en perfil, nuevo modelo para feed, agrego a admin.py
+Serializer para feed, viewset feed, permissions classes
 
