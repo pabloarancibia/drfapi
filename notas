@@ -46,4 +46,9 @@ acceder a los metodos de model serializer desde model viewset para crear y actua
 Permiso de acceso personalisado (permissions,py)
 agrego los permisos a mi model viewset
 
+Filtros
+
+Login, dar token con ObtainAuthToken y api_settings
+
+
 

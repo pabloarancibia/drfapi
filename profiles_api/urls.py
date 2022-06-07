@@ -8,5 +8,7 @@ router.register('profile', views.UserProfileViewSet)#no es necesario definir un 
 
 urlpatterns = [
     path('hello-view/', views.HelloApiView.as_view()),#cargamos la clase como funcion con as_view
-    path('', include(router.urls)) #encuentra los urls necesarios para la funcion del viewset
+    path('login/',views.UserLoginApiView.as_view()),
+    path('', include(router.urls)), #encuentra los urls necesarios para la funcion del viewset
+
 ]
