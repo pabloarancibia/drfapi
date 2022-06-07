@@ -1,3 +1,10 @@
+Curso Django Rest Framework | Basico y Avanzado (Curso Completo)
+https://www.youtube.com/watch?v=NkvvWMS220g&t=140 
+
+creo entorno con virtualenv
+source drfapi/bin/activate
+
+
 modelo para usaurios custom
 modelo de usuarios admin, donde creamos las propias funciones para crear usuarios 
 y tambien superusuario
@@ -39,5 +46,4 @@ acceder a los metodos de model serializer desde model viewset para crear y actua
 Permiso de acceso personalisado (permissions,py)
 agrego los permisos a mi model viewset
 
-quedo en min 1.24
 

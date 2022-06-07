@@ -1,8 +1,7 @@
 #from django.shortcuts import render
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from rest_framework import status
-from rest_framework import viewsets
+from rest_framework import status, filters, viewsets
 from rest_framework.authentication import TokenAuthentication
 
 from profiles_api import serializers, models, permissions
@@ -55,6 +54,9 @@ class HelloApiView(APIView):
 
 class HelloViewSet(viewsets.ViewSet):
     '''Test API ViewSet'''
+    
+    serializer_class = serializers.HelloSerializer
+
     def list(self,request):
         '''retornar lista'''
         a_viewset = [
@@ -68,7 +70,8 @@ class HelloViewSet(viewsets.ViewSet):
     def create(self, request):
         '''crear msj hola mundo con viewset'''
 
-        serializer_class = serializers.HelloSerializer
+        serializer = self.serializer_class(data=request.data)
+
 
         if serializer.is_valid():
             name = serializer.validated_data.get('name')
@@ -102,3 +105,5 @@ class UserProfileViewSet(viewsets.ModelViewSet):
     queryset = models.UserProfile.objects.all()
     authentication_classes = (TokenAuthentication,) # agregamos clase de autenticacion
     permission_classes = (permissions.UpdateOwnProfile,) # agregamos clase con permiso creado 
+    filter_backends = (filters.SearchFilter,) #agregamos clase search
+    search_fields = ('name','email',)
